@@ -529,7 +529,7 @@ const LoginPage = () => {
 
         {!showForgotPassword ? (
           <>
-            <FormTitle>Login with Phone</FormTitle>
+            <FormTitle>Login with Name</FormTitle>
             {error && <ErrorMessage>{error}</ErrorMessage>}
             <form onSubmit={handleSubmit}>
               <FormGroup>
@@ -539,7 +539,7 @@ const LoginPage = () => {
                   </IconWrapper>
                   <Input
                     type="text"
-                    placeholder="Enter Phone No."
+                    placeholder="Enter Name"
                     onChange={(e) => setUsername(e.target.value)}
                     required
                   />
