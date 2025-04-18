@@ -10,17 +10,16 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Hardcoded backend URL to fix connection issues
-const BACKEND_URL = "https://api.umkk.life";
+const BACKEND_URL = `https://bunnybet9.umkk.life`;
 
 const initialValues = {
-  contact: "",
+  username: "",
   balance: "",
   email: "",
   password: "",
 };
 
-const phoneRegExp =
-  /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
+const phoneRegExp =/^[a-zA-Z0-9 _-]+$/;
 
 const userSchema = yup.object().shape({
   contact: yup
@@ -429,7 +428,7 @@ function Page1({ handleFormSubmit }) {
               gap="1rem"
               gridTemplateColumns={isNonMobile ? undefined : "repeat(12, 1fr)"}
             >
-              {["contact", "balance", "email", "password"].map((field, index) => (
+              {["username", "balance", "email", "password"].map((field, index) => (
                 <TextField
                   key={field}
                   type={field === "password" ? "password" : "text"}
