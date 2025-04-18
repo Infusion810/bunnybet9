@@ -6,7 +6,7 @@ import History from './components/History';
 import HomePage from './pages/HomePage';
 import MatchPage from './pages/MatchPage';
 import CasinoPage from './pages/CasinoPage';
-// import LoginPage from './pages/LoginPage';
+
 import Profile from './pages/Profile';
 import Aviator from './Aviator/Aviator';
 import BettingGame from './mines/Mines';
@@ -58,7 +58,7 @@ function App() {
           {/* Public routes */}
           <Route path="/cricket2" element={<LiveCricketMarket />} />
           <Route path="/cricket2/games/:Livematch" element={<Cricket />} />
-          // <Route path="/signup" element={<LoginPage />} />
+      
           <Route path="/login" element={<Login />} />
 
           {/* Protected routes */}
